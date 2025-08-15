@@ -1,0 +1,29 @@
+{
+    "name": "bdcgenerator/laravel-document-generator",
+    "description": "This library I made to make it easy to generate documents to PDF with PhpWord and Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10|^11",
+        "illuminate/database": "^10|^11",
+        "phpoffice/phpword": "^1.2",
+        "symfony/process": "^7.0",
+        "league/flysystem-aws-s3-v3": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BDCGenerator\\DocumentGenerator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BDCGenerator\\DocumentGenerator\\BDCGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "Document": "BDCGenerator\\DocumentGenerator\\Facades\\Document"
+            }
+        }
+    }
+}
