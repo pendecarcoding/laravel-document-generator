@@ -6,7 +6,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/support": "^10|^11|^12",
-        "illuminate/database": "^10|^11",
+        "illuminate/database": "^10|^11|^12",
         "phpoffice/phpword": "^1.2",
         "symfony/process": "^6.0|^7.0",
         "league/flysystem-aws-s3-v3": "^3.0"
