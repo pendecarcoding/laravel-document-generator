@@ -5,7 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "illuminate/support": "^10|^11",
+        "illuminate/support": "^10|^11|^12",
         "illuminate/database": "^10|^11",
         "phpoffice/phpword": "^1.2",
         "symfony/process": "^6.0|^7.0",
