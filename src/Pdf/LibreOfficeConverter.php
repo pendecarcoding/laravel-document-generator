@@ -20,7 +20,16 @@ class LibreOfficeConverter
         }
         Log::info("path Docx :" . $docxFullPath);
         $docxFullPath = str_replace('\\', '/', $docxFullPath);
-        SafeExec::run([$this->binary, '--headless', '--convert-to', 'pdf', '--outdir', $outDir, $docxFullPath]);
+        SafeExec::run([
+        $this->binary,
+        '--headless',
+        '--nologo',
+        '--nofirststartwizard',
+        '--norestore',
+        '--convert-to', 'pdf',
+        '--outdir', $outDir,
+        $docxFullPath
+    ]);
 
         $pdfPath = preg_replace('/\.docx$/i', '.pdf', $outDir . '/' . basename($docxFullPath));
         if (!is_file($pdfPath)) {
